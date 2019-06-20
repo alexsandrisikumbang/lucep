@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Alexsandri</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/app.js"></script>
+  <link rel="shortcut icon" href="./images/favicon.ico"/>
+</head>
+<body>
+  <div id="main">
+<div class="happytext">
+    when happiness <br>is on you
+</div>
+  </div>
+  <div id="profile">
+  </div>
+
+<div id="widget">
+  <div align="center" id="headwidget">
+      <div id="maximize">
+        <div class="col-10" align="left">
+          <strong><span class="fontsize14 fontyellow">DO YOU WANT A CALLBACK ?</span></strong><br>
+          <span class="fontsize9">Please give us your details and we will get back to you</span>
+        </div>
+        <div class="col-2"><a href="#" onclick="showclose()" class="widgetclosbutton"><img src="./images/close.png"></a></div>
+      </div>
+      <div id="minimize">
+        <div class="col-10" align="right" style="padding-top:5px;">
+          <strong><img id="logocall" src="./images/logocolor.png"> Click here to get a call back &rsaquo;&rsaquo;</strong>
+        </div>
+        <div class="col-2"><a href="#" onclick="showclose()" class="widgetclosbutton"><img src="./images/call.png"></a></div>
+      </div>
+      <div class="col-clear"></div>
+  </div>
+  <div id="widgetbody">
+      <div class="widgetform">
+          <input type="text" id="name" placeholder="Your Name">
+          <div class="errortext" id="errorname">&nbsp;</div>
+          <input type="text" id="phone" placeholder="+62">
+          <span class="errortext" id="errorphone">&nbsp;</span>
+          <select id="content">
+              <option value="I'm Interested in Content" >I'm Interested in Content</option>
+              <option value="I'm Interested in Design">I'm Interested in Design</option>
+          </select>
+          <span class="errortext" id="errorcontent">&nbsp;</span>
+          <!-- <input type="text" id="email" placeholder="Email"> -->
+          <textarea id="comment" placeholder="Comments"></textarea>
+          <span class="errortext" id="errorcomment">&nbsp;</span>
+          <!-- <div class="widgetbutton">
+            <button>Today</button>
+            <button>T</button>
+            <button>W</button>
+            <button>T</button>
+            <button>F</button>
+            <button>S</button>
+            <button>S</button>
+          </div> -->
+          <div class="widgetbuttonschedule" align="center">
+              <button onclick="callnow()" id="btncallnow">Call Now</button>
+              Schedule a call for later
+          </div>
+      </div>
+      <div class="widgetfooter">
+        <img src="./images/logo.png">
+      </div>
+      <div id="loader">
+        <div class="loader">
+        </div>
+      </div>
+  </div>
+</div>
+</body>
+</html>

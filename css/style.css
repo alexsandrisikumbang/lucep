@@ -1,0 +1,258 @@
+html{
+  background: url(../images/main.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+  margin:0px;
+  padding:0px;
+  height: 100%;
+}
+
+.happytext{
+  position: absolute;
+  right: 100px;
+  top:35%;
+  font-size: 90px;
+  text-shadow: 5px 2px 2px #666;
+  line-height: 1;
+}
+
+#main{
+  height: 100vh;
+}
+
+#profile{
+  height: 200px;
+}
+
+#widget{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 7px 7px 7px 7px;
+  border: 1px solid #57c3ef;
+  width: 280px;
+  padding: 10px;
+  background: #0ba8e9;
+  box-shadow: 0px 0px 5px #666;
+  font-family: tahoma;
+  font-size: 12px;
+}
+
+#widgetbody{
+  height: 430px;
+  display: none;
+}
+
+#maximize{
+  display: none;
+}
+
+.widgetclosbutton img{
+  width: 50px;
+  height: 50px;
+  margin:-25px -30px 0px 0px;
+}
+
+
+.col-2{
+  float: left;
+  width: 16.7%;
+}
+.col-10{
+  float: left;
+  width: 83.3%;
+}
+
+.col-clear{
+  clear: both;
+}
+
+.fontsize9{
+  font-size: 9px;
+}
+.fontsize14{
+  font-size: 14px;
+}
+
+.fontyellow{
+  color: yellow;
+}
+
+.widgetform{
+  padding-top:20px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0px 0px 0px;
+  box-sizing: border-box;
+  background: #72c6e9;
+  border:1px solid #72c6e9;
+  border-radius: 5px;
+  color: #FFF;
+}
+
+/* #phoneflag{
+ border:1px solid #72c6e9;
+ background-color: #72c6e9;
+ width: 100%;
+ padding: 12px 20px;
+ box-sizing: border-box;
+ border-radius: 4px;
+ resize: none;
+ color: #FFF;
+ margin: 5px 0px 0px 0px;
+} */
+/* #phoneflag option[value="+62"]  { background-image:url(../images/ind.png);   } */
+/* select#phoneflag option[value="+65"] { background-image:url(female.png); }
+select#phoneflag option[value="+60"] { background-image:url(others.png); } */
+
+.widgetform textarea{
+ border:1px solid #72c6e9;
+ background-color: #72c6e9;
+ width: 100%;
+ height: 90px;
+ padding: 12px 20px;
+ box-sizing: border-box;
+ border-radius: 4px;
+ resize: none;
+ color: #FFF;
+ margin: 5px 0px 0px 0px;
+}
+
+.widgetform #content{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0px 0px 0px;
+  box-sizing: border-box;
+  border:1px solid #72c6e9;
+  border-radius: 5px;
+  color: #FFF;
+  -webkit-appearance: none;
+  background: url(../images/select.png) no-repeat right #72c6e9;
+}
+
+
+
+#phone{
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-image: url('../images/ind.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  background-color: #72c6e9;
+  border:1px solid #72c6e9;
+}
+
+.widgetfooter{
+  width: 100%;
+  text-align: center;
+}
+.widgetfooter img{
+  width: 80px;
+  padding: 10px;
+}
+
+.widgetbutton{
+  margin-top: 5px;
+}
+.widgetbutton button{
+  background-color: #2d85ad;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 3px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 10px;
+  border-radius: 3px;
+}
+.widgetbutton button:hover {
+  background-color: #5ca8cb;
+  color: white;
+  box-shadow: 0px 0px 3px #FFF;
+}
+
+.widgetbuttonschedule
+{
+  color: #FFF;
+  margin-bottom: 10px;
+}
+
+.widgetbuttonschedule button{
+  background-color: #07e7fb;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 3px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 3px;
+  width: 98%;
+  font-weight: bold;
+}
+
+.widgetbuttonschedule button:hover {
+  background-color: #09a5b3;
+  color: white;
+  box-shadow: 0px 0px 3px #FFF;
+}
+
+.errortext{
+  font-size: 10px;
+  color: #000;
+  font-style: italic;
+}
+#minimize #logocall{
+    width: 100px;
+    text-align: left;
+    position: absolute;
+    top:-40px;
+    left: 0px;
+  }
+
+#loader{
+  position: absolute;
+  top:35%;
+  left:30%;
+  display: none;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
