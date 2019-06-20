@@ -23,7 +23,7 @@ function minimize(){
 function clearform(){
   document.getElementById("name").value="";
   document.getElementById("errorname").innerHTML="&nbsp;";
-  document.getElementById("phone").value="";
+  document.getElementById("phone").value="+62";
   document.getElementById("errorphone").innerHTML="&nbsp;";
   document.getElementById("comment").value="";
   document.getElementById("errorcomment").innerHTML="&nbsp;";
@@ -38,6 +38,25 @@ function callnow(){
   //console.log(validate());
 }
 
+function phoneflag(flag){
+  console.log(flag);
+  document.getElementById("phone").value=flag;
+  document.getElementById("flagicon").src = "./images/flag/"+flag+".png";
+
+var x = document.getElementById("flagimage");
+    x.style.display = "none";
+}
+
+function displayflag() {
+  var x = document.getElementById("flagimage");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+
 function saveCall(){
                 var request = new XMLHttpRequest();
                 var url = "saveCall.txt";
@@ -45,7 +64,7 @@ function saveCall(){
                 request.setRequestHeader("Content-Type", "application/json");
                 request.onreadystatechange = function () {
                     if (request.readyState === 4 && request.status === 200) {
-                         window.alert("Thanks We Will call you..!!");
+                         window.alert("You will receive a call soon");
                          document.getElementById("btncallnow").disabled = false;
                          document.getElementById("loader").style.display="none";
                     }

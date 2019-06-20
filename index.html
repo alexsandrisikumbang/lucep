@@ -38,7 +38,18 @@
       <div class="widgetform">
           <input type="text" id="name" placeholder="Your Name">
           <div class="errortext" id="errorname">&nbsp;</div>
-          <input type="text" id="phone" placeholder="+62">
+          <div id="flagphone">
+              <div id="flagimage">
+                  <div><a href="#" onclick="phoneflag('+62')"><img src="./images/flag/+62.png"></a></div>
+                  <div><a href="#" onclick="phoneflag('+65')"><img src="./images/flag/+65.png"></a></div>
+                  <div><a href="#" onclick="phoneflag('+66')"><img src="./images/flag/+66.png"></a></div>
+                  <div><a href="#" onclick="phoneflag('+63')"><img src="./images/flag/+63.png"></a></div>
+                  <div><a href="#" onclick="phoneflag('+60')"><img src="./images/flag/+60.png"></a></div>
+              </div>
+              <a href="#" onclick="displayflag()"><div><img id="flagicon" src="./images/flag/+62.png"></div></a>
+              <input type="text" id="phone" value="+62">
+              <div class="col-clear"></div>
+          </div>
           <span class="errortext" id="errorphone">&nbsp;</span>
           <select id="content">
               <option value="I'm Interested in Content" >I'm Interested in Content</option>
@@ -48,15 +59,6 @@
           <!-- <input type="text" id="email" placeholder="Email"> -->
           <textarea id="comment" placeholder="Comments"></textarea>
           <span class="errortext" id="errorcomment">&nbsp;</span>
-          <!-- <div class="widgetbutton">
-            <button>Today</button>
-            <button>T</button>
-            <button>W</button>
-            <button>T</button>
-            <button>F</button>
-            <button>S</button>
-            <button>S</button>
-          </div> -->
           <div class="widgetbuttonschedule" align="center">
               <button onclick="callnow()" id="btncallnow">Call Now</button>
               Schedule a call for later

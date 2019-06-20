@@ -138,20 +138,46 @@ select#phoneflag option[value="+60"] { background-image:url(others.png); } */
   background: url(../images/select.png) no-repeat right #72c6e9;
 }
 
-
-
-#phone{
-  width: 100%;
+/*flag phone==============================================*/
+#flagphone{
+  position: relative;
+}
+#flagphone #phone{
+  width: 88%;
   box-sizing: border-box;
   border: 2px solid #ccc;
-  border-radius: 4px;
-  background-image: url('../images/ind.png');
+  border-radius: 0px 4px 4px 0px;
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
+  padding: 12px 20px 12px 12px;
   background-color: #72c6e9;
   border:1px solid #72c6e9;
+  float: left;
 }
+
+#flagphone a div{
+  margin-top:5px;
+  width: 9.3%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px 0px 0px 4px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 11px 20px 10px 10px;
+  background-color: #72c6e9;
+  border:1px solid #72c6e9;
+  float: left;
+}
+
+#flagimage{
+  position: absolute;
+  top:35px;
+  padding-left: 11px;
+  display: none;
+}
+
+/*flag phone==============================================*/
+
 
 .widgetfooter{
   width: 100%;
