@@ -29,10 +29,10 @@ body{
   height: 200px;
 }
 
+
+
 #widget{
   position: fixed;
-  bottom: 10px;
-  right: 10px;
   border-radius: 7px 7px 7px 7px;
   border: 1px solid #57c3ef;
   width: 280px;
@@ -43,8 +43,18 @@ body{
   font-size: 12px;
 }
 
+.widgetright{
+  bottom: 10px;
+  right: 10px;
+}
+
+.widgetleft{
+  bottom: 10px;
+  left: 10px;
+}
+
 #widgetbody{
-  height: 430px;
+  height: 270px;
   display: none;
 }
 
@@ -98,20 +108,7 @@ input[type=text] {
   color: #FFF;
 }
 
-/* #phoneflag{
- border:1px solid #72c6e9;
- background-color: #72c6e9;
- width: 100%;
- padding: 12px 20px;
- box-sizing: border-box;
- border-radius: 4px;
- resize: none;
- color: #FFF;
- margin: 5px 0px 0px 0px;
-} */
-/* #phoneflag option[value="+62"]  { background-image:url(../images/ind.png);   } */
-/* select#phoneflag option[value="+65"] { background-image:url(female.png); }
-select#phoneflag option[value="+60"] { background-image:url(others.png); } */
+
 
 .widgetform textarea{
  border:1px solid #72c6e9;
@@ -227,13 +224,13 @@ select#phoneflag option[value="+60"] { background-image:url(others.png); } */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 3px;
+  margin: 0px 0px 5px 0px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
   font-size: 14px;
   border-radius: 3px;
-  width: 98%;
+  width: 100%;
   font-weight: bold;
 }
 
@@ -256,29 +253,10 @@ select#phoneflag option[value="+60"] { background-image:url(others.png); } */
     left: 0px;
   }
 
-#loader{
+#success{
   position: absolute;
-  top:35%;
-  left:30%;
+  height: 200px;
+  width: 200px;
+  background: #DDD;
   display: none;
-}
-.loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 80px;
-  height: 80px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
-}
-
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
