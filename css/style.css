@@ -139,6 +139,23 @@ input[type=text] {
 #flagphone{
   position: relative;
 }
+#flagarea{
+  height: 110px;
+  width: 20px;
+  padding-left: 0px;
+  position: absolute;
+  display: none;
+  overflow: hidden;
+  top:35px;
+  left:10px;
+}
+#flagimage{
+  padding-left: 11px;
+  height: 115px;
+  overflow:scroll;
+  width: 37px;
+  margin-left: -10px;
+}
 #flagphone #phone{
   width: 88%;
   box-sizing: border-box;
@@ -146,7 +163,7 @@ input[type=text] {
   border-radius: 0px 4px 4px 0px;
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  padding: 12px 20px 12px 12px;
+  padding: 12px 20px 12px 13px;
   background-color: #72c6e9;
   border:1px solid #72c6e9;
   float: left;
@@ -160,18 +177,16 @@ input[type=text] {
   border-radius: 4px 0px 0px 4px;
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  padding: 11px 20px 10px 10px;
+  padding: 15px 20px 10px 10px;
   background-color: #72c6e9;
   border:1px solid #72c6e9;
   float: left;
 }
 
-#flagimage{
-  position: absolute;
-  top:35px;
-  padding-left: 11px;
-  display: none;
-}
+
+#flagimage::-webkit-scrollbar {
+                display: none;
+            }
 
 /*flag phone==============================================*/
 

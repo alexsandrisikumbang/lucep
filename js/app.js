@@ -41,6 +41,26 @@ function callnow(){
   }
 }
 
+function phoneCode(){
+   $.ajax({
+       type: "GET",
+       url: 'https://restcountries.eu/rest/v2/all',
+       success: function(p_data) {
+         v_list = p_data;
+         phoneflags(v_list);
+       }
+   });
+ }
+
+ function phoneflags(pdata) {
+   var v_rows = '';
+   $.each( pdata, function(p_key,p_value) {
+      v_rows = v_rows + '<div><a href="#" onclick="phoneflag(\''+p_value.flag+'\',\'+'+p_value.callingCodes[0]+'\')"><img src="'+p_value.flag+'" width="20"></a></div>';
+   });
+    $('#flagimage').html(v_rows);
+    console.log(v_rows);
+ }
+
 function saveCall(){
   var yourname=$('#name').val();
   var phone=$('#phone').val();
@@ -128,15 +148,10 @@ function kiosk(gb){
                           '<div class="errortext" id="errorname">&nbsp;</div>'+
                               '<input type="text" id="name" placeholder="Your Name">'+
                               '<span class="errortext" id="errorphone">&nbsp;</span>'+
-                              '<div id="flagphone">'+
+                              '<div id="flagphone"><div id="flagarea">'+
                               '    <div id="flagimage">'+
-                              '        <div><a href="#" onclick="phoneflag(\'+62\')"><img src="./images/flag/+62.png"></a></div>'+
-                              '        <div><a href="#" onclick="phoneflag(\'+65\')"><img src="./images/flag/+65.png"></a></div>'+
-                              '        <div><a href="#" onclick="phoneflag(\'+66\')"><img src="./images/flag/+66.png"></a></div>'+
-                              '        <div><a href="#" onclick="phoneflag(\'+63\')"><img src="./images/flag/+63.png"></a></div>'+
-                              '        <div><a href="#" onclick="phoneflag(\'+60\')"><img src="./images/flag/+60.png"></a></div>'+
-                              '    </div>'+
-                              '    <a href="#" onclick="displayflag()"><div><img id="flagicon" src="./images/flag/+62.png"></div></a>'+
+                              '    </div></div>'+
+                              '    <a href="#" onclick="displayflag()"><div><img id="flagicon" src="https://restcountries.eu/data/idn.svg" width="20"></div></a>'+
                               '    <input type="text" id="phone" value="+62">'+
                               '    <div class="col-clear"></div>'+
                               '</div>'+
@@ -155,20 +170,22 @@ function kiosk(gb){
 }
 
 
-function phoneflag(flag){
-  console.log(flag);
-  document.getElementById("phone").value=flag;
-  document.getElementById("flagicon").src = "./images/flag/"+flag+".png";
+function phoneflag(flag,countrycode){
+  //console.log(flag);
+  document.getElementById("phone").value=countrycode;
+  document.getElementById("flagicon").src = flag;
+  document.getElementById("flagicon").width="20";
 
-var x = document.getElementById("flagimage");
+var x = document.getElementById("flagarea");
     x.style.display = "none";
 }
 
 function displayflag() {
-  var x = document.getElementById("flagimage");
+  var x = document.getElementById("flagarea");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
     x.style.display = "block";
+    	phoneCode();
   }
 }
